@@ -1,0 +1,34 @@
+// @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500;600;900&family=Roboto:wght@300;400;500;900&display=swap");
+
+// ? Colors
+// $background1: #dd9a2d;
+$background1: rgb(34, 34, 37);
+$background2: rgb(65, 47, 65);
+$background3: rgb(48, 48, 50);
+$lightgrey: #757174;
+$secondaryColor: #e711ff;
+$primaryColor: #c008d4;
+$fontColor: #01170c;
+$bigFontColor: #404346;
+$fontFamily: "Manrope", sans-serif;
+
+$fontWeight: (
+  "regular": 300,
+  "medium": 500,
+  "semi-bold": 700,
+  "bold": 800,
+);
+
+@function f-weight($weightName) {
+  @return map-get($fontWeight, $weightName);
+}
+
+$fontSize: (
+  "large": 5.5rem,
+  "medium": 4.5rem,
+  "small": 3rem,
+);
+
+@function f-size($font-size) {
+  @return map-get($fontSize, $font-size);
+}
