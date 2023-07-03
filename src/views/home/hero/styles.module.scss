@@ -1,0 +1,36 @@
+@import "../../../styles//variables";
+@import "../../../styles//screensize";
+
+.container {
+  background-color: #f6f5eb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  .hero {
+    height: calc(100vh - 70px);
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+      font-size: 6rem;
+      @include mobileSS {
+        font-size: 5rem;
+      }
+    }
+    p {
+      font-size: 3rem;
+      font-weight: 300;
+      padding: 30px 20px;
+      color: rgb(134, 133, 133);
+      text-transform: lowercase;
+      font-style: italic;
+      @include mobileSS {
+        font-size: 2rem;
+      }
+    }
+  }
+}

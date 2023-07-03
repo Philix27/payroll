@@ -1,4 +1,4 @@
-import { Html, Head, Main, NextScript } from 'next/document'
+import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
   return (
@@ -7,7 +7,11 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
+        <script
+          src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"
+          async
+        />
       </body>
     </Html>
-  )
+  );
 }
