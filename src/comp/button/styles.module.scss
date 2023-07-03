@@ -11,9 +11,9 @@
     border: 1px solid $primaryColor;
     color: #fff;
     &:hover {
-      color: #fff;
-      background-color: $background1;
-      border: 1px solid #fff;
+      color: $fontColor;
+      background-color: $backgroundColor;
+      border: 1px solid $primaryColor;
     }
   }
 }

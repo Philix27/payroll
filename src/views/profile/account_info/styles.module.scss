@@ -1,0 +1,35 @@
+@import "../../../styles//variables";
+@import "../../../styles//screensize";
+.container {
+  .inner_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include mobileSS {
+      width: 90%;
+      flex-direction: column;
+    }
+
+    .text_content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      @include mobileSS {
+        width: 90%;
+      }
+
+      .heading {
+        font-size: 16px;
+        font-weight: 800;
+        padding: 10px;
+      }
+      .subtitle {
+        font-size: 16px;
+        font-weight: 300;
+        padding-bottom: 30px;
+      }
+    }
+  }
+}
