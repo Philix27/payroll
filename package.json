@@ -9,7 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@thirdweb-dev/react": "^3.14.7",
+    "@thirdweb-dev/sdk": "^3.10.27",
     "@types/jquery": "^3.5.16",
+    "ethers": "^5",
     "jquery": "^3.7.0",
     "next": "13.4.7",
     "react": "18.2.0",

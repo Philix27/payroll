@@ -1,6 +1,12 @@
 import "../src/styles/index.scss";
 import type { AppProps } from "next/app";
+import { ThirdwebProvider } from "@thirdweb-dev/react";
 
+const activeChain = "mumbai";
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+  return (
+    <ThirdwebProvider activeChain={activeChain}>
+      <Component {...pageProps} />
+    </ThirdwebProvider>
+  );
 }
