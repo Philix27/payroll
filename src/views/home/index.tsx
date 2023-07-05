@@ -10,8 +10,8 @@ import NavComp from "@/src/comp/navbar";
 export default function HomeView() {
   return (
     <div className={styles.container} id="container">
-      <HeroComp />
       <NavComp />
+      <HeroComp />
       <SectionView />
       <CardsView />
       <Section2View />
