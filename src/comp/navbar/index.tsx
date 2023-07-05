@@ -12,13 +12,19 @@ export default function NavComp() {
       </div>
       <div className={styles.nav_links}>
         <div className={styles.nav_item}>
-          <p>Home</p>
+          <Link href="#solutions">
+            <p>Solution</p>
+          </Link>
         </div>
         <div className={styles.nav_item}>
-          <p>Home</p>
+          <Link href="#use_case">
+            <p>Use case</p>
+          </Link>
         </div>
         <div className={styles.nav_item}>
-          <p>Home</p>
+          <Link href="#about">
+            <p>About</p>
+          </Link>
         </div>
         <div className={styles.nav_item}>
           <Link href="/profile">
