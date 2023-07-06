@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ethersproject/providers": "^5.7.2",
+    "@superfluid-finance/sdk-core": "^0.6.6",
     "@thirdweb-dev/react": "^3.14.7",
     "@thirdweb-dev/sdk": "^3.10.27",
     "@types/jquery": "^3.5.16",
@@ -22,7 +24,8 @@
     "styled-components": "^6.0.0-rc.3",
     "timeago-react": "^3.0.5",
     "viem": "^1.0.7",
-    "wagmi": "^1.2.0"
+    "wagmi": "^1.2.0",
+    "web3modal": "^1.9.12"
   },
   "devDependencies": {
     "@types/node": "20.3.3",

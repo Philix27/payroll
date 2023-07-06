@@ -32,16 +32,21 @@
   }
   .nav_links {
     display: flex;
+    // background-color: $primaryColor;
+    height: 100%;
     @include mobileSS {
       display: none;
     }
     .nav_item {
-      padding: 20px;
-      padding-bottom: 15px;
+      padding: 0 20px;
+      line-height: 70px;
       border-bottom: solid 5px #fff;
       &:hover {
         // background-color: $primaryColor;
-        border-bottom: solid 5px $primaryColor;
+        border-bottom: solid 3px $primaryColor;
+        p {
+          color: $primaryColor;
+        }
       }
       p {
         font-size: large;
