@@ -15,3 +15,5 @@ export default function ProfileView() {
     </div>
   );
 }
+
+// npm create sanity@latest -- --template get-started --project 6yy2i02c --dataset production --provider google
