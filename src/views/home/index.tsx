@@ -10,6 +10,7 @@ import UseCaseView from "./use_case";
 import JumbutronView from "./jumbutron";
 
 export default function HomeView() {
+  // const {} = useweb3;
   return (
     <div className={styles.container} id="container">
       <NavComp />
