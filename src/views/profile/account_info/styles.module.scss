@@ -1,5 +1,6 @@
 @import "../../../styles//variables";
 @import "../../../styles//screensize";
+
 .container {
   .inner_container {
     display: flex;
@@ -26,7 +27,7 @@
         padding: 10px;
       }
       .subtitle {
-        font-size: 16px;
+        font-size: 12px;
         font-weight: 300;
         padding-bottom: 30px;
       }

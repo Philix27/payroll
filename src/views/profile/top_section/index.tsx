@@ -1,8 +1,10 @@
 import React from "react";
 import styles from "./styles.module.scss";
 import { Button } from "@/src/comp/button/button";
+import { useAddress } from "@thirdweb-dev/react";
 
 export default function TopSection() {
+  const wallet_address = useAddress();
   return (
     <section className={styles.bg1}>
       <div className={styles.inner_container}>
