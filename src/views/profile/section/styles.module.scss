@@ -11,7 +11,7 @@
   .inner_container {
     width: 80%;
     display: flex;
-    margin-top: 100px;
+    // margin-top: 100px;
     @include mobileSS {
       flex-direction: column;
     }

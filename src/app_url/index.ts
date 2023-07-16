@@ -1,11 +1,9 @@
 export const AppLinks = {
-  login: "/",
-  pos: "/pos",
-  dashboard: "/dashboard",
-  transaction: "/bank",
+  landing: "/",
+  employee: "/employee",
+  goody: "/goody",
+  history: "/history",
   settings: "/settings",
-  orders: "/orders",
-  analytics: "/analytics",
-  manager: "/manager",
-  users: "/users",
+  profile: "/profile",
+  wrap: "/wrap",
 };

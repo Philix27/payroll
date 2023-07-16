@@ -1,12 +1,18 @@
 import { ReactNode } from "react";
 import { TiGroup } from "react-icons/ti";
-import { RiMoneyDollarCircleLine } from "react-icons/ri";
+import { RiExchangeDollarFill, RiMoneyDollarCircleLine } from "react-icons/ri";
 import { BsBank, BsBriefcase } from "react-icons/bs";
 import { VscHome } from "react-icons/vsc";
-import { MdOutlineInventory } from "react-icons/md";
+import {
+  MdDashboard,
+  MdGroup,
+  MdHistory,
+  MdOutlineInventory,
+  MdSwapHoriz,
+} from "react-icons/md";
 import { IoMdSettings } from "react-icons/io";
 import { BsBarChartFill, BsCart4 } from "react-icons/bs";
-import { AiFillAppstore } from "react-icons/ai";
+import { AiFillAppstore, AiTwotoneDollar } from "react-icons/ai";
 import { AppLinks } from "../../app_url";
 
 interface ISidebarItem {
@@ -18,29 +24,29 @@ interface ISidebarItem {
 
 export const sideBarItems: ISidebarItem[] = [
   {
-    icon: <AiFillAppstore />,
-    title: "POS",
-    link: AppLinks.pos,
+    icon: <MdDashboard />,
+    title: "Home",
+    link: AppLinks.profile,
   },
   {
-    icon: <BsCart4 />,
-    title: "Orders",
-    link: AppLinks.orders,
+    icon: <MdGroup />,
+    title: "Beneficiaries",
+    link: AppLinks.employee,
   },
   {
-    icon: <TiGroup />,
-    title: "Users",
-    link: AppLinks.users,
+    icon: <MdHistory />,
+    title: "History",
+    link: AppLinks.history,
   },
   {
-    icon: <BsBarChartFill />,
-    title: "Analytics",
-    link: AppLinks.analytics,
+    icon: <MdSwapHoriz />,
+    title: "Wrap/Unwrap",
+    link: AppLinks.wrap,
   },
   {
-    icon: <MdOutlineInventory />,
-    title: "Inventory",
-    link: AppLinks.manager,
+    icon: <RiExchangeDollarFill />,
+    title: "Good $",
+    link: AppLinks.goody,
   },
   {
     icon: <IoMdSettings />,
