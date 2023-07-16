@@ -4,6 +4,7 @@ import { SideBar } from "../sidebar/sidebar";
 import NavBar from "../navbar/navbar.comp";
 import { useAppSelector } from "redux/hooks";
 import { SettingsReduxType } from "redux/store";
+import AuthWrapper from "./auth";
 
 export default function BaseWrapper(props: any) {
   const [showMenu, setShowMenu] = useState<boolean>(false);
@@ -13,15 +14,17 @@ export default function BaseWrapper(props: any) {
     setShowMenu((prev) => !prev);
   };
   return (
-    <div className={styles.wrapper}>
-      <SideBar collapseSidebar={redux_settings.isDarkTheme} />
-      <div className={styles.children_container}>
-        <NavBar
-          collapsible={collapseSidebar}
-          setCollapseSidebar={setCollapseSidebar}
-        />
-        {props.children}
+    <AuthWrapper>
+      <div className={styles.wrapper}>
+        <SideBar collapseSidebar={redux_settings.isDarkTheme} />
+        <div className={styles.children_container}>
+          <NavBar
+            collapsible={collapseSidebar}
+            setCollapseSidebar={setCollapseSidebar}
+          />
+          {props.children}
+        </div>
       </div>
-    </div>
+    </AuthWrapper>
   );
 }

@@ -26,7 +26,7 @@ export const sideBarItems: ISidebarItem[] = [
   {
     icon: <MdDashboard />,
     title: "Dashboard",
-    link: AppLinks.profile,
+    link: AppLinks.dashboard,
   },
   {
     icon: <MdGroup />,

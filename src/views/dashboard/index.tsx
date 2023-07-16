@@ -7,7 +7,7 @@ import BaseWrapper from "comp/wrapper";
 import { CONTRACT_ADDRESS } from "libs/address";
 
 export default function DashboardView() {
-  const { contract } = useContract(CONTRACT_ADDRESS);
+  // const { contract } = useContract(CONTRACT_ADDRESS);
   return (
     <>
       <TopSection />

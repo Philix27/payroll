@@ -3,6 +3,7 @@ import styles from "./styles.module.scss";
 import Link from "next/link";
 import { useAddress, ConnectWallet, useDisconnect } from "@thirdweb-dev/react";
 import { useRouter } from "next/router";
+import { AppLinks } from "app_url";
 
 export default function NavComp() {
   const wallet_address = useAddress();
@@ -40,7 +41,7 @@ export default function NavComp() {
         )}
         {router.route === "/" && (
           <div className={styles.nav_item}>
-            <Link href="/profile">
+            <Link href={AppLinks.dashboard}>
               <p>Go to profile</p>
             </Link>
           </div>

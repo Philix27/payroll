@@ -12,7 +12,8 @@
     align-items: center;
     justify-content: center;
     width: 80%;
-    padding: 20px;
+    margin-top: 100px;
+    padding: 50px 0;
     @include mobileSS {
       padding-top: 0px;
       width: 90%;
@@ -26,7 +27,6 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding-bottom: 50px;
       text-align: center;
       @include mobileSS {
         width: 90%;
