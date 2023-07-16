@@ -10,6 +10,7 @@ import TimeAgo from "timeago-react"; // var TimeAgo =
 import { SettingsReduxType } from "redux/store";
 import { SettingsActions } from "redux/slice/settings";
 import { useAppDispatch, useAppSelector } from "redux/hooks";
+import { useAddress } from "@thirdweb-dev/react";
 
 interface IProps {
   collapsible: boolean;
@@ -19,7 +20,7 @@ export default function NavBar(data: IProps) {
   const [showNav, setShowNav] = useState(false);
   const dispatch = useAppDispatch();
   const redux_settings = useAppSelector(SettingsReduxType);
-
+  const address = useAddress();
   return (
     <div className={styles.navbar}>
       <div
@@ -38,23 +39,19 @@ export default function NavBar(data: IProps) {
         <p>Username</p>
       </div>
       <div>
-        <p>Amount Sold So far</p>
+        <p>{address}</p>
       </div>
       <div>
         <p>
-          Logged in:
+          Last seen:
           <TimeAgo live={false} datetime={Date.now()} />
         </p>
       </div>
       <div>
         <p>
-          Created:
+          Joined:
           <TimeAgo live={false} datetime={Date.UTC(2023, 7, 27)} />
         </p>
-      </div>
-      <div className={styles.theme}>
-        <p>Dark Mode</p>
-        {/* <BsLightbulb /> */}
       </div>
     </div>
   );

@@ -25,7 +25,7 @@ interface ISidebarItem {
 export const sideBarItems: ISidebarItem[] = [
   {
     icon: <MdDashboard />,
-    title: "Home",
+    title: "Dashboard",
     link: AppLinks.profile,
   },
   {
@@ -45,7 +45,7 @@ export const sideBarItems: ISidebarItem[] = [
   },
   {
     icon: <RiExchangeDollarFill />,
-    title: "Good $",
+    title: "Good Dollar",
     link: AppLinks.goody,
   },
   {

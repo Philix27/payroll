@@ -6,7 +6,7 @@ import { useContract } from "@thirdweb-dev/react";
 import BaseWrapper from "comp/wrapper";
 import { CONTRACT_ADDRESS } from "libs/address";
 
-export default function ProfileView() {
+export default function DashboardView() {
   const { contract } = useContract(CONTRACT_ADDRESS);
   return (
     <>

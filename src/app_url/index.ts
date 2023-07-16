@@ -4,6 +4,6 @@ export const AppLinks = {
   goody: "/goody",
   history: "/history",
   settings: "/settings",
-  profile: "/profile",
+  dashboard: "/dashboard",
   wrap: "/wrap",
 };

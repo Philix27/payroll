@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./wrapper.module.scss";
 import { SideBar } from "../sidebar/sidebar";
-import NavBar from "../navbar_p/navbar.comp";
+import NavBar from "../navbar/navbar.comp";
 import { useAppSelector } from "redux/hooks";
 import { SettingsReduxType } from "redux/store";
 
