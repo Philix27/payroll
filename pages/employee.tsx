@@ -1,11 +1,11 @@
 import BaseWrapper from "comp/wrapper";
 import React from "react";
-import ProfileView from "views/profile";
+import BeneficiaryView from "views/beneficiary";
 
 export default function ProfilePage() {
   return (
     <BaseWrapper>
-      <ProfileView />
+      <BeneficiaryView />
     </BaseWrapper>
   );
 }
