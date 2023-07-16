@@ -7,14 +7,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgb(255, 255, 255);
   background-size: cover;
   background-position: center;
-  background-image: linear-gradient(
-      rgba(132, 230, 237, 0.001),
-      rgba(104, 253, 198, 0.1)
-    ),
-    url(../../../../public/images/bg2.jpg);
 }
 .bg2 {
   width: 100%;
@@ -25,11 +19,6 @@
   justify-content: center;
   background-size: cover;
   background-position: center;
-  background-image: linear-gradient(
-      rgba(132, 230, 237, 0),
-      rgba(104, 253, 198, 0)
-    ),
-    url(../../../../public/images/bg.jpg);
 }
 
 .inner_container {
@@ -39,6 +28,7 @@
   width: 80%;
   height: 100%;
   padding-top: 10vh;
+  background-color: $backgroundColor;
   @include mobileSS {
     padding-top: 0px;
     width: 90%;
@@ -57,7 +47,6 @@
     }
     img {
       height: 500px;
-      // filter: grayscale(100%) sepia(100%) hue-rotate(243deg) saturate(100%);
       @include mobileSS {
         height: 350px;
       }

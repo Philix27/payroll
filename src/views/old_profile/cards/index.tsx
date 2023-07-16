@@ -1,34 +1,23 @@
 import React from "react";
 import styles from "./styles.module.scss";
-import { Button } from "comp/button/button";
-import { AiFillAppstore, AiFillSecurityScan } from "react-icons/ai";
+import { Button } from "@/src/comp/button/button";
 
-export default function UseCaseView() {
+export default function CardsView() {
   return (
-    <section className={styles.container} id={"use_case"}>
+    <section className={styles.container}>
       <div className={styles.inner_container}>
         {cardItem({
-          icon: <AiFillSecurityScan />,
+          img: "./cards/card.avif",
           title: "Hello peops",
           p: "Automate all your reoccurring bills to enable your focus on other aspects of your life.",
         })}
         {cardItem({
-          icon: <AiFillAppstore />,
+          img: "./cards/dollar.avif",
           title: "Hello peops",
           p: "Automate all your reoccurring bills to enable your focus on other aspects of your life.",
         })}
         {cardItem({
-          icon: <AiFillSecurityScan />,
-          title: "Hello peops",
-          p: "Automate all your reoccurring bills to enable your focus on other aspects of your life.",
-        })}
-        {cardItem({
-          icon: <AiFillSecurityScan />,
-          title: "Hello peops",
-          p: "Automate all your reoccurring bills to enable your focus on other aspects of your life.",
-        })}
-        {cardItem({
-          icon: <AiFillSecurityScan />,
+          img: "./cards/secure.avif",
           title: "Hello peops",
           p: "Automate all your reoccurring bills to enable your focus on other aspects of your life.",
         })}
@@ -37,13 +26,15 @@ export default function UseCaseView() {
   );
 }
 function cardItem(data: {
-  icon: JSX.Element;
+  img: string;
   title: string;
   p: string;
 }): JSX.Element {
   return (
     <div className={styles.card}>
-      <div className={styles.image}>{data.icon}</div>
+      <div className={styles.image}>
+        <img src={data.img} alt="hero_img" />
+      </div>
       <div className={styles.text_content}>
         <h3>{data.title}</h3>
         <p>{data.p}</p>

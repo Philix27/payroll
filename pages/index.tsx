@@ -1,5 +1,5 @@
 import { Inter } from "next/font/google";
-import HomeView from "@/src/views/home";
+import HomeView from "views/home";
 
 const inter = Inter({ subsets: ["latin"] });
 
