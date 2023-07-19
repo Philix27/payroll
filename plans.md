@@ -19,3 +19,17 @@
 
 - Best Superfluid checkout
 - Best Good dollar project
+
+## Sections
+
+- Use react sdk to stream money
+  - Setup dashboard
+  - Attach logic to it
+- Implement the superfluid smart contract interface
+  - Use it to set up a sf checkout
+- Implement Good Dollar
+  - Setup checkout
+
+## Task
+- Design wrap & unwrap token
+ 
