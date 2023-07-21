@@ -1,27 +1,22 @@
 import { Framework } from "@superfluid-finance/sdk-core";
-import "./createFlow.css";
 import { ethers } from "ethers";
+import { Celo } from "@thirdweb-dev/chains";
 
 interface IProps {
   amount: string;
+  signer: ethers.Signer | undefined;
 }
 
 //where the Superfluid logic takes place
 export async function upgradeTokens(props: IProps) {
-  const provider = new ethers.providers.Web3Provider(window.ethereum);
-  await provider.send("eth_requestAccounts", []);
-
-  const signer = provider.getSigner();
-
-  const chainId = await window.ethereum.request({ method: "eth_chainId" });
   const sf = await Framework.create({
-    chainId: Number(chainId),
-    provider: provider,
+    chainId: Celo.chainId,
+    provider: Celo,
   });
 
-  const superSigner = sf.createSigner({ signer: signer });
+  const superSigner = sf.createSigner({ signer: props.signer });
 
-  console.log(signer);
+  // console.log(signer);
   console.log(await superSigner.getAddress());
   const daix = await sf.loadSuperToken("fDAIx");
 
@@ -34,7 +29,7 @@ export async function upgradeTokens(props: IProps) {
 
     console.log("Upgrading...");
 
-    await upgradeOperation.exec(signer);
+    await upgradeOperation.exec(props.signer);
 
     console.log(
       `Congrats - you've just upgraded your tokens to an Index!

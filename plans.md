@@ -31,5 +31,12 @@
   - Setup checkout
 
 ## Task
+
 - Design wrap & unwrap token
- 
+
+## Ideas
+
+- CDCare
+  - Buy now, pay little by little
+- Ecommerce
+  - checkout

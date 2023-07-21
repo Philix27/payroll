@@ -1,27 +1,21 @@
 import { Framework } from "@superfluid-finance/sdk-core";
-import "./createFlow.css";
 import { ethers } from "ethers";
+import { Celo } from "@thirdweb-dev/chains";
 
 interface IProps {
   amount: string;
+  signer: ethers.Signer | undefined;
 }
 
 //where the Superfluid logic takes place
 export async function downgradeTokens(props: IProps) {
-  const provider = new ethers.providers.Web3Provider(window.ethereum);
-  await provider.send("eth_requestAccounts", []);
-
-  const signer = provider.getSigner();
-
-  const chainId = await window.ethereum.request({ method: "eth_chainId" });
   const sf = await Framework.create({
-    chainId: Number(chainId),
-    provider: provider,
+    chainId: Celo.chainId,
+    provider: Celo,
   });
 
-  const superSigner = sf.createSigner({ signer: signer });
+  const superSigner = sf.createSigner({ signer: props.signer });
 
-  console.log(signer);
   console.log(await superSigner.getAddress());
   const daix = await sf.loadSuperToken("fDAIx");
 
@@ -34,7 +28,7 @@ export async function downgradeTokens(props: IProps) {
 
     console.log("downgrading...");
 
-    await downgradeOperation.exec(signer);
+    await downgradeOperation.exec(props.signer);
 
     console.log(
       `Congrats - you've just downgraded your tokens
@@ -50,7 +44,7 @@ export async function downgradeTokens(props: IProps) {
     );
   } catch (error) {
     console.log(
-      "Hmmm, your transaction threw an error. Make sure that this stream does not already exist, and that you've entered a valid Ethereum address!"
+      "Error. Make sure that this stream does not already exist, and that you've entered a valid Ethereum address!"
     );
     console.error(error);
   }

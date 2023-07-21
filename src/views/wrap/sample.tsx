@@ -5,6 +5,7 @@ import { approveTokens } from "./approve_tokens";
 import { upgradeTokens } from "./upgrade_token";
 import { downgradeTokens } from "./downgrade";
 import { ApproveButton, DowngradeButton, UpgradeButton } from "./comps";
+import { useSigner } from "@thirdweb-dev/react";
 
 let account;
 
@@ -17,7 +18,7 @@ export const SuperTokens = () => {
   const [isDowngradeButtonLoading, setIsDowngradeButtonLoading] =
     useState(false);
   const [currentAccount, setCurrentAccount] = useState("");
-
+  const signer = useSigner();
   const handleApproveAmountChange = (e: any) => {
     setApproveAmount(() => ([e.target.name] = e.target.value));
   };
@@ -112,7 +113,10 @@ export const SuperTokens = () => {
             isLoading={isApproveButtonLoading}
             onClick={() => {
               setIsApproveButtonLoading(true);
-              approveTokens({ amount: approveAmount });
+              approveTokens({
+                amount: approveAmount,
+                signer: signer,
+              });
               setTimeout(() => {
                 setIsApproveButtonLoading(false);
               }, 1000);
@@ -135,7 +139,10 @@ export const SuperTokens = () => {
           isLoading={isUpgradeButtonLoading}
           onClick={() => {
             setIsUpgradeButtonLoading(true);
-            upgradeTokens({ amount: downgradeAmount });
+            upgradeTokens({
+              amount: downgradeAmount,
+              signer: signer,
+            });
             setTimeout(() => {
               setIsUpgradeButtonLoading(false);
             }, 1000);
@@ -167,7 +174,7 @@ export const SuperTokens = () => {
       <div className="description">
         <p>
           Go to the SuperTokens.js component and look at the
-          <b> upgrade and approve </b>
+          <b>Upgrade and approve </b>
           functions to see under the hood
         </p>
       </div>
