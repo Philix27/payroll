@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Form, FormGroup, FormControl, Card } from "react-bootstrap";
 import "./createFlow.css";
-import { approveTokens } from "./approve_tokens";
-import { upgradeTokens } from "./upgrade_token";
-import { downgradeTokens } from "./downgrade";
-import { ApproveButton, DowngradeButton, UpgradeButton } from "./comps";
+import { approveTokens } from "./wrap/approve_tokens";
+import { upgradeTokens } from "./wrap/upgrade_token";
+import { downgradeTokens } from "./wrap/downgrade";
+import { ApproveButton, DowngradeButton, UpgradeButton } from "./wrap/comps";
 import { useSigner } from "@thirdweb-dev/react";
 
 let account;

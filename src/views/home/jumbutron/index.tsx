@@ -7,10 +7,11 @@ export default function JumbutronView() {
     <section className={styles.container}>
       <div className={styles.inner_container}>
         <div className={styles.text_content}>
-          {/* <h1>Automate</h1> */}
+          <h1>Modern Payroll</h1>
           <p>
-            Automate all your reoccurring bills to enable your focus on other
-            aspects of your life.
+            You do not have to wait till the end of the month before paying your
+            employees. You can simply stream their earnings all through the
+            month.
           </p>
         </div>
       </div>

@@ -7,12 +7,11 @@ import {
   MdDashboard,
   MdGroup,
   MdHistory,
+  MdHome,
   MdOutlineInventory,
   MdSwapHoriz,
 } from "react-icons/md";
 import { IoMdSettings } from "react-icons/io";
-import { BsBarChartFill, BsCart4 } from "react-icons/bs";
-import { AiFillAppstore, AiTwotoneDollar } from "react-icons/ai";
 import { AppLinks } from "../../app_url";
 
 interface ISidebarItem {
@@ -23,6 +22,11 @@ interface ISidebarItem {
 }
 
 export const sideBarItems: ISidebarItem[] = [
+  {
+    icon: <MdHome />,
+    title: "Home",
+    link: AppLinks.landing,
+  },
   {
     icon: <MdDashboard />,
     title: "Dashboard",

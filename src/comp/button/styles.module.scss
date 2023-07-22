@@ -9,7 +9,7 @@
     border-radius: 5px;
     background-color: $primaryColor;
     border: 1px solid $primaryColor;
-    color: #fff;
+    color: $backgroundColor;
     &:hover {
       color: $fontColor;
       background-color: $backgroundColor;

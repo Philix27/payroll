@@ -1,5 +1,5 @@
 import { Framework } from "@superfluid-finance/sdk-core";
-import { daiABI } from "./config";
+import { daiABI } from "../config";
 import { ethers } from "ethers";
 
 interface IProps {

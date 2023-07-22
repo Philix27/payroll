@@ -6,10 +6,11 @@ import { AppLinks } from "app_url";
 export default function AuthWrapper(props: any) {
   const address = useAddress();
 
-  const router = useRouter();
-  if (address) {
-    return <>{props.children}</>;
-  } else {
-    router.push(AppLinks.landing);
-  }
+  // const router = useRouter();
+  // if (address) {
+  //   return <>{props.children}</>;
+  // } else {
+  //   router.push(AppLinks.landing);
+  // }
+  return <>{props.children}</>;
 }

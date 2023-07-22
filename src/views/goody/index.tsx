@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./styles.module.scss";
-import { CONTRACT_ADDRESS } from "libs/address";
+// import { CONTRACT_ADDRESS } from "views/_core/address";
 import { useAddress, useContract } from "@thirdweb-dev/react";
 import { SectionTitle } from "comp/section_title";
 

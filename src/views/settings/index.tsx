@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./styles.module.scss";
 import { useAddress, useContract } from "@thirdweb-dev/react";
 import { SectionTitle } from "comp/section_title";
+import { formatWalletAddress } from "utils/helper";
 
 export default function SettingsView() {
   const address = useAddress();
@@ -22,7 +23,7 @@ export default function SettingsView() {
             <p className={styles.title}>Wallet</p>
             <p className={styles.subtitle}>Wallet</p>
           </div>
-          <div className={styles.value}>{address}</div>
+          <div className={styles.value}>{formatWalletAddress(address!)}</div>
         </div>
         <div className={styles.section}>
           <div className={styles.first_section}>

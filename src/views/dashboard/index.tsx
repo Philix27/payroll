@@ -4,7 +4,7 @@ import TopSection from "./top_section";
 import SecondSection from "./section";
 import { useContract } from "@thirdweb-dev/react";
 import BaseWrapper from "comp/wrapper";
-import { CONTRACT_ADDRESS } from "libs/address";
+// import { CONTRACT_ADDRESS } from "views/_core/address";
 
 export default function DashboardView() {
   // const { contract } = useContract(CONTRACT_ADDRESS);

@@ -40,3 +40,5 @@
   - Buy now, pay little by little
 - Ecommerce
   - checkout
+- Netflix
+  - Pay for exactly what you stream

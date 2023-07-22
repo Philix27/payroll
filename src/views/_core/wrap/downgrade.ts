@@ -19,8 +19,6 @@ export async function downgradeTokens(props: IProps) {
   console.log(await superSigner.getAddress());
   const daix = await sf.loadSuperToken("fDAIx");
 
-  console.log(daix);
-
   try {
     const downgradeOperation = daix.downgrade({
       amount: props.amount,
