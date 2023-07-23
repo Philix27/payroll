@@ -17,7 +17,7 @@
     "@reduxjs/toolkit": "^1.9.5",
     "@sanity/client": "^6.1.7",
     "@sanity/image-url": "^1.0.2",
-    "@superfluid-finance/sdk-core": "0.5.0",
+    "@superfluid-finance/sdk-core": "0.5.3",
     "bignumber.js": "^9.0.1",
     "ethers": "5.7.2",
     "graphql": "16.6.0",

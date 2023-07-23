@@ -6,7 +6,9 @@
   height: 100%;
   transition: left 200ms ease-in-out;
   font-family: "Manrope", sans-serif;
-
+  @include mobileSS {
+    display: none;
+  }
   .sidebar {
     height: 100%;
     background-color: $cardColor;

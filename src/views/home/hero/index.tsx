@@ -6,8 +6,8 @@ export default function HeroComp() {
     <div className={styles.container} id="hero">
       <div className={styles.inner_container}>
         <div className={styles.text_content}>
-          {/* <h1>Money Streaming Technology</h1> */}
-          <h1>Real-time finance </h1>
+          <h1>Money Streaming</h1>
+          {/* <h1>Real-time finance </h1> */}
           <p>
             Stream salaries to your employees in real-time through out the
             month.

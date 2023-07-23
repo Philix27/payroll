@@ -32,20 +32,20 @@
       padding: 20px;
       border: solid 0.1px $greyColor;
       &:hover {
-        background-color: $primaryDarkColor;
-        color: #fff;
+        background-color: $primaryColor;
+        color: $backgroundColor;
         .text_content {
           h3 {
-            color: #fff;
+            color: $backgroundColor;
           }
         }
 
         p {
-          color: #fff;
+          color: $backgroundColor;
         }
         .image {
           svg {
-            color: #fff;
+            color: $backgroundColor;
           }
         }
       }

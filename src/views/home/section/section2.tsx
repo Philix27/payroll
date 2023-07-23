@@ -4,7 +4,7 @@ import { Button } from "comp/button/button";
 import { useRouter } from "next/router";
 
 export default function Section2View() {
-  const router = useRouter()
+  const router = useRouter();
   return (
     <section className={styles.bg2}>
       <div className={styles.inner_container}>

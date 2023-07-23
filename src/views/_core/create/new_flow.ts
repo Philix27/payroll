@@ -1,8 +1,11 @@
-import { Framework } from "@superfluid-finance/sdk-core";
+import { Framework, SuperToken } from "@superfluid-finance/sdk-core";
 import { ethers } from "ethers";
 
-//where the Superfluid logic takes place
-async function createNewFlow(recipient, flowRate) {
+export async function createNewFlow(props: {
+  recipient: string;
+  flowRate: string;
+  account_address: string;
+}) {
   const provider = new ethers.providers.Web3Provider(window.ethereum);
   await provider.send("eth_requestAccounts", []);
 
@@ -15,35 +18,21 @@ async function createNewFlow(recipient, flowRate) {
   });
 
   const superSigner = sf.createSigner({ signer: signer });
-
-  console.log(signer);
-  console.log(await superSigner.getAddress());
-  const daix = await sf.loadSuperToken("fDAIx");
-
+  const daix: SuperToken = await sf.loadSuperToken("fDAIx");
   console.log(daix);
 
   try {
     const createFlowOperation = daix.createFlow({
-      sender: await superSigner.getAddress(),
-      receiver: recipient,
-      flowRate: flowRate,
+      sender: props.account_address,
+      receiver: props.recipient,
+      flowRate: props.flowRate,
       // userData?: string
     });
-
-    console.log(createFlowOperation);
-    console.log("Creating your stream...");
-
     const result = await createFlowOperation.exec(superSigner);
-    console.log(result);
-
-    console.log(
-      `Congrats - you've just created a money stream!
-    `
-    );
+    console.log("Congrats - you've just created a money stream!", result);
   } catch (error) {
-    console.log(
-      "Hmmm, your transaction threw an error. Make sure that this stream does not already exist, and that you've entered a valid Ethereum address!"
-    );
+    console.log("Make sure that this stream does not already exist");
+    console.log("and that you've entered a valid Ethereum address!");
     console.error(error);
   }
 }

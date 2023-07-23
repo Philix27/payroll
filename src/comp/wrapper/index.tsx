@@ -16,7 +16,9 @@ export default function BaseWrapper(props: any) {
   return (
     <AuthWrapper>
       <div className={styles.wrapper}>
-        <SideBar collapseSidebar={redux_settings.isDarkTheme} />
+        <div className={styles.sidebar}>
+          <SideBar collapseSidebar={redux_settings.isDarkTheme} />
+        </div>
         <div className={styles.children_container}>
           <NavBar
             collapsible={collapseSidebar}

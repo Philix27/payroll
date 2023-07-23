@@ -5,5 +5,25 @@ import { useContract } from "@thirdweb-dev/react";
 
 export default function WrapView() {
   // const { contract } = useContract(CONTRACT_ADDRESS);
-  return <div className={styles.container} id="container"></div>;
+  return (
+    <div className={styles.container} id="container">
+      <div className={styles.inner_container}>
+        <div className={styles.top}>
+          <p>Wrap</p>
+          <p>Unwrap</p>
+        </div>
+        <div className={styles.content}>
+          <div>
+            <input type="text" />
+            <p>Coin Dia</p>
+          </div>
+          <div>
+            <input type="text" />
+            <p>Coin Dia</p>
+          </div>
+        </div>
+        <div className={styles.bottom}></div>
+      </div>
+    </div>
+  );
 }

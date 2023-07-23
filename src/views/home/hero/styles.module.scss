@@ -9,8 +9,12 @@
   justify-content: center;
   background-size: cover;
   background-position: center;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.231), rgba(0, 0, 0, 0.2)),
-    url(../../../../public/images/bgb.jpg);
+  // filter: grayscale(50%) sepia(100%) hue-rotate(243deg) saturate(100%);
+  background-image: linear-gradient(
+      rgba(126, 97, 0, 0.00158),
+      rgba(222, 215, 0, 0.001)
+    ),
+    url(../../../../public/images/flow_free.png);
   .inner_container {
     display: flex;
     align-items: center;
@@ -35,7 +39,7 @@
       }
       img {
         height: 600px;
-        filter: grayscale(100%) sepia(100%) hue-rotate(243deg) saturate(100%);
+        // filter: grayscale(100%) sepia(100%) hue-rotate(243deg) saturate(100%);
         @include mobileSS {
           height: 350px;
         }
@@ -47,6 +51,7 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      text-align: center;
       align-items: center;
       padding: 20px 100px;
       background-color: #000000b5;

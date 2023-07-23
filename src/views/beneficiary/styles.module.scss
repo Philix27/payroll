@@ -7,6 +7,19 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  .title_section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    @include mobileSS {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
   .inner_container {
     width: 80%;
     background-color: $cardColor;
@@ -21,20 +34,12 @@
       &:last-child {
         border-bottom: none;
       }
-      .first_section {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        .title {
-          font-weight: 700;
-          padding-bottom: 20px;
-        }
-        .subtitle {
-          font-weight: 300;
-          font-size: small;
-        }
+
+      .title {
+        font-weight: 600;
       }
       .value {
+        font-weight: 400;
       }
     }
   }

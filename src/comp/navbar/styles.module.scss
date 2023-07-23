@@ -8,8 +8,10 @@
   padding: 0px 20px;
   height: 40px;
   background-color: $cardColor;
-  // border-bottom: solid 1px $greyColor;
   margin-bottom: 30px;
+  @include mobileSS {
+    display: none;
+  }
   p {
     font-size: small;
     font-weight: 700;

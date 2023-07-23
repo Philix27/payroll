@@ -1,50 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./styles.module.scss";
-// import { CONTRACT_ADDRESS } from "views/_core/address";
 import { useAddress, useContract } from "@thirdweb-dev/react";
 import { SectionTitle } from "comp/section_title";
+import { formatWalletAddress } from "utils/helper";
+import { Button } from "comp/button/button";
+import router from "next/router";
 
 export default function HistoryView() {
   const address = useAddress();
-
+  const [showAddBenModal, setShowAddBenModal] = useState(false);
   return (
     <div className={styles.container}>
-      {SectionTitle("History")}
+      <div className={styles.title_section}>{SectionTitle("History")}</div>
       <div className={styles.inner_container}>
         <div className={styles.section}>
-          <div className={styles.first_section}>
-            <p className={styles.title}>Username</p>
-            <p className={styles.subtitle}>Username</p>
-          </div>
-          <div className={styles.value}>Value</div>
+          <p className={styles.title}>From</p>
+          <p className={styles.title}>Amount</p>
+          <p className={styles.value}>To</p>
         </div>
         <div className={styles.section}>
-          <div className={styles.first_section}>
-            <p className={styles.title}>Wallet</p>
-            <p className={styles.subtitle}>Wallet</p>
-          </div>
-          <div className={styles.value}>{address}</div>
-        </div>
-        <div className={styles.section}>
-          <div className={styles.first_section}>
-            <p className={styles.title}>Theme</p>
-            <p className={styles.subtitle}>Theme</p>
-          </div>
-          <div className={styles.value}>Value</div>
-        </div>
-        <div className={styles.section}>
-          <div className={styles.first_section}>
-            <p className={styles.title}>Last seen</p>
-            <p className={styles.subtitle}>Last seen</p>
-          </div>
-          <div className={styles.value}>Date</div>
-        </div>
-        <div className={styles.section}>
-          <div className={styles.first_section}>
-            <p className={styles.title}>Joined</p>
-            <p className={styles.subtitle}>Joined</p>
-          </div>
-          <div className={styles.value}>Date</div>
+          <p className={styles.title}>0x223</p>
+          <p className={styles.title}>20,000 cUSD</p>
+          <p className={styles.value}>0x223</p>
+          {/* <div className={styles.value}>{formatWalletAddress(address!)}</div> */}
         </div>
       </div>
     </div>
