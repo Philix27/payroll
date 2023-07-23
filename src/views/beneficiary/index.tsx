@@ -3,7 +3,7 @@ import styles from "./styles.module.scss";
 import { useAddress, useContract } from "@thirdweb-dev/react";
 import { SectionTitle } from "comp/section_title";
 import { formatWalletAddress } from "utils/helper";
-import { Button } from "comp/button/button";
+import { Button } from "comp/button";
 import router from "next/router";
 import AddBeneficiary from "./add/add_flow";
 

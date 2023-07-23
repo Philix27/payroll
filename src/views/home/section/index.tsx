@@ -1,10 +1,10 @@
 import React from "react";
 import styles from "./styles.module.scss";
-import { Button } from "comp/button/button";
+import { Button } from "comp/button";
 import { useRouter } from "next/router";
 
 export default function SectionView() {
-   const router = useRouter();
+  const router = useRouter();
   return (
     <section className={styles.bg1}>
       <div className={styles.inner_container}>

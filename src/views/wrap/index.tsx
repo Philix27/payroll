@@ -1,28 +1,53 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./styles.module.scss";
 import { useContract } from "@thirdweb-dev/react";
+import { Button } from "comp/button";
 // import { CONTRACT_ADDRESS } from "views/_core/address";
 
 export default function WrapView() {
-  // const { contract } = useContract(CONTRACT_ADDRESS);
+  const [isWrap, setIsWrap] = useState(true);
   return (
     <div className={styles.container} id="container">
       <div className={styles.inner_container}>
         <div className={styles.top}>
-          <p>Wrap</p>
-          <p>Unwrap</p>
-        </div>
-        <div className={styles.content}>
-          <div>
-            <input type="text" />
-            <p>Coin Dia</p>
+          <div className={styles.buttons}>
+            <p
+              onClick={() => setIsWrap(true)}
+              className={isWrap ? styles.active : ""}
+            >
+              Wrap
+            </p>
+            <p
+              onClick={() => setIsWrap(false)}
+              className={!isWrap ? styles.active : ""}
+            >
+              Unwrap
+            </p>
           </div>
           <div>
-            <input type="text" />
-            <p>Coin Dia</p>
+            <p>1 Diax = 1 Dia</p>
           </div>
         </div>
-        <div className={styles.bottom}></div>
+        <div className={styles.center}>
+          <div className={styles.content}>
+            <div className={styles.field}>
+              <input type="number" placeholder="amount" maxLength={8} />
+              <p>Coin Dia</p>
+            </div>
+            <div className={styles.field}>
+              <input
+                type="number"
+                placeholder="amount"
+                disabled
+                maxLength={8}
+              />
+              <p>Coin Diax</p>
+            </div>
+          </div>
+        </div>
+        <div className={styles.bottom}>
+          <Button text={"Wrap"} onClick={() => {}} />
+        </div>
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./styles.module.scss";
-import { Button } from "comp/button/button";
+import { Button } from "comp/button";
 import { useRouter } from "next/router";
 
 export default function Section2View() {

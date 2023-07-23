@@ -4,7 +4,7 @@ import { BiCalendar } from "react-icons/bi";
 import { MdDeleteOutline } from "react-icons/md";
 import { IoClose } from "react-icons/io5";
 import WorkflowTextInput from "./text-input";
-import { Button } from "comp/button/button";
+import { Button } from "comp/button";
 
 interface IProps {
   showFlow: React.Dispatch<React.SetStateAction<boolean>>;
