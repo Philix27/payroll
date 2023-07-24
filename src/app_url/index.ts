@@ -5,5 +5,6 @@ export const AppLinks = {
   history: "/history",
   settings: "/settings",
   dashboard: "/dashboard",
+  checkout: "/checkout",
   wrap: "/wrap",
 };

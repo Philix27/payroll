@@ -1,14 +1,10 @@
 import { ReactNode } from "react";
-import { TiGroup } from "react-icons/ti";
-import { RiExchangeDollarFill, RiMoneyDollarCircleLine } from "react-icons/ri";
-import { BsBank, BsBriefcase } from "react-icons/bs";
-import { VscHome } from "react-icons/vsc";
+import { RiExchangeDollarFill } from "react-icons/ri";
 import {
   MdDashboard,
   MdGroup,
   MdHistory,
   MdHome,
-  MdOutlineInventory,
   MdSwapHoriz,
 } from "react-icons/md";
 import { IoMdSettings } from "react-icons/io";
@@ -31,6 +27,11 @@ export const sideBarItems: ISidebarItem[] = [
     icon: <MdDashboard />,
     title: "Dashboard",
     link: AppLinks.dashboard,
+  },
+  {
+    icon: <MdDashboard />,
+    title: "SF Checkout",
+    link: AppLinks.checkout,
   },
   {
     icon: <MdGroup />,
