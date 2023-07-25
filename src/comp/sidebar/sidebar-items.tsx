@@ -9,6 +9,7 @@ import {
 } from "react-icons/md";
 import { IoMdSettings } from "react-icons/io";
 import { AppLinks } from "../../app_url";
+import { IoReturnUpBack } from "react-icons/io5";
 
 interface ISidebarItem {
   icon: ReactNode;
@@ -18,11 +19,6 @@ interface ISidebarItem {
 }
 
 export const sideBarItems: ISidebarItem[] = [
-  {
-    icon: <MdHome />,
-    title: "Home",
-    link: AppLinks.landing,
-  },
   {
     icon: <MdDashboard />,
     title: "Dashboard",
@@ -57,5 +53,10 @@ export const sideBarItems: ISidebarItem[] = [
     icon: <IoMdSettings />,
     title: "Settings",
     link: AppLinks.settings,
+  },
+  {
+    icon: <IoReturnUpBack />,
+    title: "Home",
+    link: AppLinks.landing,
   },
 ];

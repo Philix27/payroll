@@ -8,12 +8,14 @@ import Section2View from "./section/section2";
 import NavComp from "views/home/navbar";
 import UseCaseView from "./use_case";
 import JumbutronView from "./jumbutron";
+import HomeNavbar from "./navbarr";
 
 export default function HomeView() {
   // const {} = useweb3;
   return (
     <div className={styles.container} id="container">
-      <NavComp />
+      <HomeNavbar />
+      {/* <NavComp /> */}
       <HeroComp />
       <JumbutronView />
       <SectionView />

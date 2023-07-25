@@ -50,6 +50,7 @@ export const SideBar: React.FC<Props> = ({ collapseSidebar }) => {
 };
 
 const Wrapper = styled.div<{ $isCollapse: boolean }>`
-  width: ${(props) => (props.$isCollapse ? "55px" : "250px")};
+  /* width: max-content; */
+  width: ${(props) => (props.$isCollapse ? "55px" : "max-content")};
   height: 100vh;
 `;

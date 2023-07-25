@@ -42,3 +42,7 @@
   - checkout
 - Netflix
   - Pay for exactly what you stream
+
+## Notes
+
+- https://docs.superfluid.finance/superfluid/protocol-overview/use-cases/recurring-payments

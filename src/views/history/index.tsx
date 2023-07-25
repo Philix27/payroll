@@ -5,12 +5,14 @@ import { SectionTitle } from "comp/section_title";
 import { formatWalletAddress } from "utils/helper";
 import { Button } from "comp/button";
 import router from "next/router";
+import ProfileNavbar from "views/home/navbar_pro";
 
 export default function HistoryView() {
   const address = useAddress();
   const [showAddBenModal, setShowAddBenModal] = useState(false);
   return (
     <div className={styles.container}>
+      <ProfileNavbar />
       <div className={styles.title_section}>{SectionTitle("History")}</div>
       <div className={styles.inner_container}>
         <div className={styles.section}>

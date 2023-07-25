@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import styles from "./styles.module.scss";
-import { useContract } from "@thirdweb-dev/react";
 import { Button } from "comp/button";
-// import { CONTRACT_ADDRESS } from "views/_core/address";
+import ProfileNavbar from "views/home/navbar_pro";
 
 export default function WrapView() {
   const [isWrap, setIsWrap] = useState(true);
   return (
     <div className={styles.container} id="container">
+      <ProfileNavbar />
       <div className={styles.inner_container}>
         <div className={styles.top}>
           <div className={styles.buttons}>

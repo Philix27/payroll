@@ -6,12 +6,14 @@ import { formatWalletAddress } from "utils/helper";
 import { Button } from "comp/button";
 import router from "next/router";
 import AddBeneficiary from "./add/add_flow";
+import ProfileNavbar from "views/home/navbar_pro";
 
 export default function BeneficiaryView() {
   const address = useAddress();
   const [showAddBenModal, setShowAddBenModal] = useState(false);
   return (
     <div className={styles.container}>
+      <ProfileNavbar />
       <div className={styles.title_section}>
         {SectionTitle("Beneficiaries")}
         {

@@ -1,6 +1,4 @@
 import { useState } from "react";
-import Link from "next/link";
-import { useRouter } from "next/router";
 import {
   BsReverseLayoutTextSidebarReverse,
   BsLayoutSidebarInsetReverse,
@@ -10,7 +8,8 @@ import TimeAgo from "timeago-react"; // var TimeAgo =
 import { SettingsReduxType } from "redux/store";
 import { SettingsActions } from "redux/slice/settings";
 import { useAppDispatch, useAppSelector } from "redux/hooks";
-import { useAddress } from "@thirdweb-dev/react";
+import { useAddress, useNetworkMismatch } from "@thirdweb-dev/react";
+import { formatWalletAddress } from "utils/helper";
 
 interface IProps {
   collapsible: boolean;
@@ -21,6 +20,7 @@ export default function NavBar(data: IProps) {
   const dispatch = useAppDispatch();
   const redux_settings = useAppSelector(SettingsReduxType);
   const address = useAddress();
+  const isMismatched = useNetworkMismatch();
   return (
     <div className={styles.navbar}>
       <div
@@ -36,10 +36,14 @@ export default function NavBar(data: IProps) {
         )}
       </div>
       <div>
-        <p>Username</p>
+        {isMismatched ? (
+          <p>Network: Disconnected</p>
+        ) : (
+          <p> Network: Connected</p>
+        )}
       </div>
       <div>
-        <p>{address}</p>
+        <p>{formatWalletAddress(address!)}</p>
       </div>
       <div>
         <p>

@@ -12,7 +12,7 @@ import { Provider as ReduxProvider } from "react-redux";
 import { store } from "../src/redux/store";
 import { PersistGate } from "redux-persist/integration/react";
 import { persistStore } from "redux-persist";
-import { Celo } from "@thirdweb-dev/chains";
+import { Celo, Mumbai, Polygon } from "@thirdweb-dev/chains";
 
 const client_id = "923643a14d677804ef20b1c0f799890b";
 const secret_key =
@@ -29,7 +29,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <ReduxProvider store={store}>
       <PersistGate loading={null} persistor={persistor}>
         <ThirdwebProvider
-          activeChain={Celo}
+          activeChain={Mumbai}
           autoConnectTimeout={5000}
           autoConnect={true}
           // clientId="YOUR_CLIENT_ID"

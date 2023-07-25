@@ -3,12 +3,14 @@ import styles from "./styles.module.scss";
 import { useAddress, useContract } from "@thirdweb-dev/react";
 import { SectionTitle } from "comp/section_title";
 import { formatWalletAddress } from "utils/helper";
+import ProfileNavbar from "views/home/navbar_pro";
 
 export default function SettingsView() {
   const address = useAddress();
 
   return (
     <div className={styles.container}>
+      <ProfileNavbar />
       {SectionTitle("Settings")}
       <div className={styles.inner_container}>
         <div className={styles.section}>

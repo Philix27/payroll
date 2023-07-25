@@ -7,18 +7,18 @@ export default function CardsView() {
     <section className={styles.container}>
       <div className={styles.inner_container}>
         {cardItem({
-          img: "./cards/card.avif",
-          title: "Hello peops",
+          img: "./cards/c1.png",
+          title: "Tokens",
           p: "Automate all your reoccurring bills to enable your focus on other aspects of your life.",
         })}
         {cardItem({
-          img: "./cards/dollar.avif",
-          title: "Hello peops",
+          img: "./cards/c3.png",
+          title: "Security",
           p: "Automate all your reoccurring bills to enable your focus on other aspects of your life.",
         })}
         {cardItem({
-          img: "./cards/secure.avif",
-          title: "Hello peops",
+          img: "./cards/c2.png",
+          title: "Funds",
           p: "Automate all your reoccurring bills to enable your focus on other aspects of your life.",
         })}
       </div>

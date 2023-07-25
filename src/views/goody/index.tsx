@@ -3,12 +3,14 @@ import styles from "./styles.module.scss";
 // import { CONTRACT_ADDRESS } from "views/_core/address";
 import { useAddress, useContract } from "@thirdweb-dev/react";
 import { SectionTitle } from "comp/section_title";
+import ProfileNavbar from "views/home/navbar_pro";
 
 export default function GoodDollarView() {
   const address = useAddress();
 
   return (
     <div className={styles.container}>
+      <ProfileNavbar />
       {SectionTitle("Good Dollar")}
       <div className={styles.inner_container}>
         <div className={styles.section}>

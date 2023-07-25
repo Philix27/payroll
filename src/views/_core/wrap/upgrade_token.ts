@@ -32,14 +32,6 @@ export async function upgradeTokens(props: IProps) {
     await upgradeOperation.exec(props.signer);
 
     console.log(
-      `Congrats - you've just upgraded your tokens to an Index!
-         Network: Goerli
-         Super Token: DAIx
-         Amount: ${props.amount}         
-      `
-    );
-
-    console.log(
       `Congrats - you've just distributed to your index!
     `
     );

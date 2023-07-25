@@ -39,20 +39,19 @@ export default function NavComp() {
             </Link>
           </div>
         )}
-        {router.route === "/" && (
+        {wallet_address && (
           <div className={styles.nav_item}>
             <Link href={AppLinks.dashboard}>
-              <p>Go to profile</p>
+              <p>Profile</p>
             </Link>
           </div>
         )}
 
-        {!wallet_address && (
+        {!wallet_address ? (
           <div className={styles.nav_item}>
             <ConnectWallet />
           </div>
-        )}
-        {wallet_address && (
+        ) : (
           <div className={styles.nav_item} onClick={disconnect}>
             <Link href="/">
               <p>Disconnect</p>
