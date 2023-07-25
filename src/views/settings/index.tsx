@@ -3,7 +3,7 @@ import styles from "./styles.module.scss";
 import { useAddress, useContract } from "@thirdweb-dev/react";
 import { SectionTitle } from "comp/section_title";
 import { formatWalletAddress } from "utils/helper";
-import ProfileNavbar from "views/home/navbar_pro";
+import ProfileNavbar from "comp/navbar";
 
 export default function SettingsView() {
   const address = useAddress();

@@ -5,7 +5,7 @@ import { SectionTitle } from "comp/section_title";
 import { formatWalletAddress } from "utils/helper";
 import { Button } from "comp/button";
 import router from "next/router";
-import ProfileNavbar from "views/home/navbar_pro";
+import ProfileNavbar from "comp/navbar";
 
 export default function HistoryView() {
   const address = useAddress();

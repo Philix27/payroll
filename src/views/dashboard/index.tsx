@@ -4,7 +4,7 @@ import TopSection from "./top_section";
 import SecondSection from "./section";
 import TableSection from "./section";
 import TokenSection from "./section/token";
-import ProfileNavbar from "views/home/navbar_pro";
+import ProfileNavbar from "comp/navbar";
 
 export default function DashboardView() {
   return (

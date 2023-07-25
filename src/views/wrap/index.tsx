@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./styles.module.scss";
 import { Button } from "comp/button";
-import ProfileNavbar from "views/home/navbar_pro";
+import ProfileNavbar from "comp/navbar";
 
 export default function WrapView() {
   const [isWrap, setIsWrap] = useState(true);

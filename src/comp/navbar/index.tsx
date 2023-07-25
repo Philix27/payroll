@@ -14,39 +14,6 @@ export default function ProfileNavbar() {
   const disconnect = useDisconnect();
   const router = useRouter();
 
-  const HomeRoutes: Array<JSX.Element> = [
-    <p key="1">
-      <Link href={"#use_case"}>Use case</Link>
-    </p>,
-    <p key="2">
-      <Link href="#solutions">Solution</Link>
-    </p>,
-  ];
-  const ProfileRoutes: Array<JSX.Element> = [
-    <p key="1">
-      <Link href={AppLinks.dashboard}>Dashboard</Link>
-    </p>,
-    <p key="2">
-      <Link href={AppLinks.wrap}>Wrap/unwrap</Link>
-    </p>,
-    <p key="3">
-      <Link href={AppLinks.checkout}>Checkout</Link>
-    </p>,
-    <p key="4">
-      <Link href={AppLinks.employee}>Beneficiary</Link>
-    </p>,
-    <p key="5">
-      <Link href={AppLinks.goody}>Good Dollar</Link>
-    </p>,
-    <p key="6">
-      <Link href={AppLinks.history}>History</Link>
-    </p>,
-  ];
-
-  function getLinks(path: string): Array<JSX.Element> {
-    if (path === " /") return HomeRoutes;
-    else return ProfileRoutes;
-  }
   return (
     <div className={styles.container}>
       <div className={styles.inner_container}>
@@ -72,9 +39,24 @@ export default function ProfileNavbar() {
           onClick={() => setShowModal(false)}
           className={showModal ? styles.links : styles.no_link}
         >
-          {...getLinks(router.pathname)}
-          {/* {...ProfileRoutes} */}
-
+          <p key="1">
+            <Link href={AppLinks.dashboard}>Dashboard</Link>
+          </p>
+          <p key="2">
+            <Link href={AppLinks.wrap}>Wrap/unwrap</Link>
+          </p>
+          <p key="3">
+            <Link href={AppLinks.checkout}>Checkout</Link>
+          </p>
+          <p key="4">
+            <Link href={AppLinks.employee}>Beneficiary</Link>
+          </p>
+          <p key="5">
+            <Link href={AppLinks.goody}>Good Dollar</Link>
+          </p>
+          <p key="6">
+            <Link href={AppLinks.history}>History</Link>
+          </p>
           {wallet_address && (
             <p onClick={() => setShowModal(false)}>
               <Link href={AppLinks.dashboard}>Profile</Link>

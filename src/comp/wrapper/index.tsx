@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import styles from "./wrapper.module.scss";
 import { SideBar } from "../sidebar/sidebar";
-import NavBar from "../navbar/navbar.comp";
+// import NavBar from "../navbar/navbar.comp";
 import { useAppSelector } from "redux/hooks";
 import { SettingsReduxType } from "redux/store";
 import AuthWrapper from "./auth";
+import Side_NavBar from "comp/sidebar/navbar.comp";
 
 export default function BaseWrapper(props: any) {
   const [showMenu, setShowMenu] = useState<boolean>(false);
@@ -20,7 +21,7 @@ export default function BaseWrapper(props: any) {
           <SideBar collapseSidebar={redux_settings.isDarkTheme} />
         </div>
         <div className={styles.children_container}>
-          <NavBar
+          <Side_NavBar
             collapsible={collapseSidebar}
             setCollapseSidebar={setCollapseSidebar}
           />

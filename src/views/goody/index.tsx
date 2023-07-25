@@ -3,7 +3,7 @@ import styles from "./styles.module.scss";
 // import { CONTRACT_ADDRESS } from "views/_core/address";
 import { useAddress, useContract } from "@thirdweb-dev/react";
 import { SectionTitle } from "comp/section_title";
-import ProfileNavbar from "views/home/navbar_pro";
+import ProfileNavbar from "comp/navbar";
 
 export default function GoodDollarView() {
   const address = useAddress();
