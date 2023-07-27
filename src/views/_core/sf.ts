@@ -9,7 +9,7 @@ interface IProps {
   signer: ethers.Signer | undefined;
 }
 
-export class AppToken {
+export class AppTokenManager {
   provider = new ethers.providers.InfuraProvider("matic", "<INFURA_API_KEY>");
 
   sf: Promise<Framework> | any;
@@ -18,7 +18,7 @@ export class AppToken {
   constructor() {
     this.create_super_token();
   }
-  async create_super_token() {
+  private async create_super_token() {
     this.sf = await Framework.create({ chainId: 4201, provider: Mumbai });
     // .then(() => {})
     // .catch((e) => {});

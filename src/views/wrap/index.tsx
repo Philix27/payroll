@@ -2,9 +2,18 @@ import React, { useState } from "react";
 import styles from "./styles.module.scss";
 import { Button } from "comp/button";
 import ProfileNavbar from "comp/navbar";
+import { AppTokenManager } from "views/_core/sf";
 
 export default function WrapView() {
   const [isWrap, setIsWrap] = useState(true);
+  const [tokenValue, setTokenValue] = useState({
+    base_coin: 1,
+    converted_token: 1,
+  });
+  const handleSubmit = () => {
+    const sf = new AppTokenManager();
+    sf.create_super_token();
+  };
   return (
     <div className={styles.container} id="container">
       <ProfileNavbar />
@@ -30,25 +39,78 @@ export default function WrapView() {
         </div>
         <div className={styles.center}>
           <div className={styles.content}>
-            <div className={styles.field}>
-              <input type="number" placeholder="amount" maxLength={8} />
-              <p>Coin Dia</p>
-            </div>
-            <div className={styles.field}>
-              <input
-                type="number"
-                placeholder="amount"
-                disabled
-                maxLength={8}
-              />
-              <p>Coin Diax</p>
-            </div>
+            {convertedFrom({
+              title: isWrap ? "Dia" : "Diax",
+              holder: "from",
+              val: tokenValue.base_coin.toString(),
+              onChange: (e) => {
+                let _val = Number(e.target.value);
+                if (_val <= 0) _val = 1;
+                setTokenValue((prev) => ({
+                  ...prev,
+                  base_coin: _val,
+                }));
+              },
+            })}
+            {convertedTo({
+              title: !isWrap ? "Dia" : "Diax",
+              holder: "to",
+              val: tokenValue.base_coin.toString(),
+              onChange: (e) => {
+                setTokenValue((prev) => ({
+                  ...prev,
+                  converted_token: Number(e.target.value),
+                }));
+              },
+            })}
           </div>
         </div>
         <div className={styles.bottom}>
           <Button text={"Wrap"} onClick={() => {}} />
         </div>
       </div>
+    </div>
+  );
+}
+
+function convertedFrom(props: {
+  holder?: string;
+  title: string;
+  val: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}) {
+  return (
+    <div className={styles.field}>
+      <input
+        type="number"
+        placeholder={"amount"}
+        maxLength={8}
+        onChange={props.onChange}
+        value={props.val}
+        min={"1"}
+      />
+      <p>{props.title}</p>
+    </div>
+  );
+}
+
+function convertedTo(props: {
+  holder?: string;
+  title: string;
+  val: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}) {
+  return (
+    <div className={styles.field}>
+      <input
+        type="number"
+        placeholder={"amount"}
+        disabled
+        maxLength={8}
+        onChange={props.onChange}
+        value={props.val}
+      />
+      <p>{props.title}</p>
     </div>
   );
 }

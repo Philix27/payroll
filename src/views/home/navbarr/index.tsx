@@ -14,6 +14,7 @@ export default function HomeNavbar() {
   const disconnect = useDisconnect();
   const router = useRouter();
 
+  const ProfileRoutes: Array<JSX.Element> = [];
   const HomeRoutes: Array<JSX.Element> = [
     <p key="1">
       <Link href={"#use_case"}>Use case</Link>
@@ -22,29 +23,9 @@ export default function HomeNavbar() {
       <Link href="#solutions">Solution</Link>
     </p>,
   ];
-  const ProfileRoutes: Array<JSX.Element> = [
-    <p key="1">
-      <Link href={AppLinks.dashboard}>Dashboard</Link>
-    </p>,
-    <p key="2">
-      <Link href={AppLinks.wrap}>Wrap/unwrap</Link>
-    </p>,
-    <p key="3">
-      <Link href={AppLinks.checkout}>Checkout</Link>
-    </p>,
-    <p key="4">
-      <Link href={AppLinks.employee}>Beneficiary</Link>
-    </p>,
-    <p key="5">
-      <Link href={AppLinks.goody}>Good Dollar</Link>
-    </p>,
-    <p key="6">
-      <Link href={AppLinks.history}>History</Link>
-    </p>,
-  ];
 
   function getLinks(path: string): Array<JSX.Element> {
-    if (path === " /") return HomeRoutes;
+    if (path === "/") return HomeRoutes;
     else return ProfileRoutes;
   }
   return (
