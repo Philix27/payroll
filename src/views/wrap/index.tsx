@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "./styles.module.scss";
 import { Button } from "comp/button";
 import ProfileNavbar from "comp/navbar";
-import { AppTokenManager } from "views/_core/sf";
+import { AppTokenManager } from "_core/sevice";
 
 export default function WrapView() {
   const [isWrap, setIsWrap] = useState(true);
@@ -12,7 +12,10 @@ export default function WrapView() {
   });
   const handleSubmit = () => {
     const sf = new AppTokenManager();
-    sf.create_super_token();
+    sf.approve_token({
+      amount: tokenValue.converted_token.toString(),
+      signer: 1,
+    });
   };
   return (
     <div className={styles.container} id="container">

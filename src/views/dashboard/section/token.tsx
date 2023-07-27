@@ -9,7 +9,7 @@ import {
 import { SectionTitle } from "comp/section_title";
 import { formatAmount, formatWalletAddress } from "utils/helper";
 import { NATIVE_TOKEN_ADDRESS } from "@thirdweb-dev/sdk";
-import { Address } from "views/_core/address";
+import { Address } from "_core/address";
 
 export default function TokenSection() {
   const chain = useChain();
