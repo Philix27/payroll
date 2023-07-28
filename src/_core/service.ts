@@ -23,8 +23,9 @@ export class AppTokenManager {
       hostAddress: "0x3E14dC1b13c488a8d5D310918780c983bD5982E7",
       cfaV1Address: "0x6EeE6060f715257b970700bc2656De21dEdF074C",
       idaV1Address: "0xB0aABBA4B2783A72C52956CDEF62d438ecA2d7a1",
-      resolverAddress: "",
-      governanceAddress: "",
+      resolverAddress: "0xB0aABBA4B2783A72C52956CDEF62d438ecA2d7a1", //fake
+      governanceAddress: "0xB0aABBA4B2783A72C52956CDEF62d438ecA2d7a1", //! fake
+      cfaV1ForwarderAddress: "string",
     };
 
     this.sf = await SuperToken.create({
@@ -36,7 +37,7 @@ export class AppTokenManager {
       chainId: Mumbai.chainId,
     });
 
-    this.sf.create
+    this.sf.create;
     // this.sf = await Framework.create({
     //   chainId: Mumbai.chainId,
     //   provider: ThirdwebProvider,
