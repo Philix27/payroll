@@ -33,3 +33,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+/.sanity
+
+# Logs
+/logs
+*.log
+
+# Coverage directory used by testing tools
+/coverage

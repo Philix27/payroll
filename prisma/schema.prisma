@@ -1,6 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -11,34 +8,34 @@ datasource db {
 }
 
 model user {
-  id           String    @id @default(uuid())
-  name     String?
-  email     String?
-  emailVerified    DateTime?
-  image String?
-  provider     String?
-
-  created_at   DateTime? @default(now())
-  updated_at   DateTime? @updatedAt
-  user         post[]
-  accounts account[]
+  id            String    @id @default(uuid())
+  name          String?
+  email         String?
+  emailVerified DateTime?
+  image         String?
+  provider      String?
+  created_at    DateTime? @default(now())
+  updated_at    DateTime? @updatedAt
+  user          post[]
+  accounts      account[]
 }
+
 model account {
   id           String    @id @default(uuid())
   provider     String?
   account_name String?
   created_at   DateTime? @default(now())
   updated_at   DateTime? @updatedAt
- user_id String
-  user    user   @relation(fields: [user_id], references: [id])
+  user_id      String
+  user         user      @relation(fields: [user_id], references: [id])
 }
 
 model post {
-  id      String  @id @default(uuid())
-  title   String
-  content String?
+  id         String    @id @default(uuid())
+  title      String
+  content    String?
   created_at DateTime? @default(now())
   updated_at DateTime? @updatedAt
-  user_id String
-  user    user   @relation(fields: [user_id], references: [id])
+  user_id    String
+  user       user      @relation(fields: [user_id], references: [id])
 }
