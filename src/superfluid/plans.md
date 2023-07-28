@@ -1,2 +1,0 @@
-- Frist wrap the ERC20 token to a super token
-- At the end convert supertokens to an erc20 token

@@ -12,7 +12,6 @@
     "coin_release": "npx thirdweb@latest release"
   },
   "dependencies": {
-    "@3rdweb/hooks": "^3.10.27",
     "@ethersproject/providers": "^5.7.2",
     "@reduxjs/toolkit": "^1.9.5",
     "@sanity/client": "^6.1.7",
@@ -24,7 +23,6 @@
     "bignumber.js": "^9.0.1",
     "ethers": "5.7.2",
     "graphql": "16.6.0",
-    "jquery": "^3.7.0",
     "next": "13.4.7",
     "react": "18.2.0",
     "react-bootstrap": "^2.8.0",
@@ -34,11 +32,7 @@
     "redux-persist": "^6.0.0",
     "sass": "^1.63.3",
     "styled-components": "^6.0.0-rc.3",
-    "timeago-react": "^3.0.5",
-    "viem": "^1.0.7",
-    "wagmi": "^1.2.0",
-    "web3modal": "^1.9.12",
-    "zksync-web3": "^0.14.3"
+    "timeago-react": "^3.0.5"
   },
   "devDependencies": {
     "@matterlabs/hardhat-zksync-solc": "^0.3.17",
