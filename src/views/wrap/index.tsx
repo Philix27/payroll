@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import styles from "./styles.module.scss";
 import { Button } from "comp/button";
 import ProfileNavbar from "comp/navbar";
-import { AppTokenManager } from "_core/sevice";
+import { AppTokenManager } from "_core/service";
+import { useSigner } from "@thirdweb-dev/react";
 
 export default function WrapView() {
+  const signer = useSigner();
   const [isWrap, setIsWrap] = useState(true);
   const [tokenValue, setTokenValue] = useState({
     base_coin: 1,
@@ -14,7 +16,7 @@ export default function WrapView() {
     const sf = new AppTokenManager();
     sf.approve_token({
       amount: tokenValue.converted_token.toString(),
-      signer: 1,
+      signer: signer!,
     });
   };
   return (
@@ -69,7 +71,12 @@ export default function WrapView() {
           </div>
         </div>
         <div className={styles.bottom}>
-          <Button text={"Wrap"} onClick={() => {}} />
+          <Button
+            text={"Wrap"}
+            onClick={() => {
+              handleSubmit();
+            }}
+          />
         </div>
       </div>
     </div>
