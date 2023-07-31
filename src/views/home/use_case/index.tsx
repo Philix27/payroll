@@ -15,7 +15,7 @@ export default function UseCaseView() {
         {cardItem({
           icon: <AiFillAppstore />,
           title: "For family",
-          p: "Settle reoccuring family expenses by setting up streams with sends money periodiclly.",
+          p: "Settle reoccurring family expenses by setting up streams with sends money periodically.",
         })}
         {cardItem({
           icon: <AiFillSecurityScan />,
@@ -43,7 +43,7 @@ function cardItem(data: {
 }): JSX.Element {
   return (
     <div className={styles.card}>
-      <div className={styles.image}>{data.icon}</div>
+      {/* <div className={styles.image}>{data.icon}</div> */}
       <div className={styles.text_content}>
         <h3>{data.title}</h3>
         <p>{data.p}</p>

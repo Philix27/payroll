@@ -25,18 +25,7 @@ export default function PayView() {
       <div className={styles.inner_container}>
         <div className={styles.top}>
           <div className={styles.buttons}>
-            <p
-              onClick={() => setIsWrap(true)}
-              className={isWrap ? styles.active : ""}
-            >
-              Wrap
-            </p>
-            <p
-              onClick={() => setIsWrap(false)}
-              className={!isWrap ? styles.active : ""}
-            >
-              Unwrap
-            </p>
+            <p className={styles.active}>Checkout</p>
           </div>
           <div>
             <p>1 Diax = 1 Dia</p>
@@ -60,13 +49,13 @@ export default function PayView() {
             <div className={styles.field}>
               <select>
                 <option value={""}>
-                  <p>Name: 0.03893</p>
+                  <p>John: 0.03893</p>
                 </option>
                 <option value={""}>
-                  <p>Name: 0.03893</p>
+                  <p>Rich: 0.03893</p>
                 </option>
                 <option value={""}>
-                  <p>Name: 0.03893</p>
+                  <p>Kennedy: 0.03893</p>
                 </option>
               </select>
               <p>{"address"}</p>
@@ -106,4 +95,3 @@ function convertedFrom(props: {
     </div>
   );
 }
-

@@ -12,9 +12,11 @@
     "coin_release": "npx thirdweb@latest release"
   },
   "dependencies": {
+    "@metamask/detect-provider": "^2.0.0",
     "@reduxjs/toolkit": "^1.9.5",
     "@sanity/client": "^6.1.7",
     "@sanity/image-url": "^1.0.2",
+    "@sanity/vision": "^3.14.1",
     "@superfluid-finance/sdk-core": "^0.6.8",
     "@thirdweb-dev/react": "^3.14.7",
     "@thirdweb-dev/sdk": "^3.10.27",
@@ -27,11 +29,11 @@
     "react-icons": "^4.9.0",
     "react-redux": "^8.1.1",
     "redux-persist": "^6.0.0",
-    "sass": "^1.63.3",
     "sanity": "^3.14.1",
-    "@sanity/vision": "^3.14.1",
+    "sass": "^1.63.3",
     "styled-components": "^6.0.0-rc.3",
-    "timeago-react": "^3.0.5"
+    "timeago-react": "^3.0.5",
+     "web3": "^1.5.2"
   },
   "devDependencies": {
     "@matterlabs/hardhat-zksync-solc": "^0.3.17",
