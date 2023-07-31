@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import styles from "./styles.module.scss";
 import { Button } from "comp/button";
 import ProfileNavbar from "comp/navbar";
 import { AppTokenManager } from "_core/service";
 import { useSigner } from "@thirdweb-dev/react";
 
-export default function WrapView() {
+export default function PayView() {
   const signer = useSigner();
   const [isWrap, setIsWrap] = useState(true);
   const [tokenValue, setTokenValue] = useState({
@@ -19,13 +19,6 @@ export default function WrapView() {
       signer: signer!,
     });
   };
-
-  // useEffect(() => {
-  //   new ethers.providers.Web3Provider(window.ethereum).getSigner();
-  
-    
-  // }, []);
-  
   return (
     <div className={styles.container} id="container">
       <ProfileNavbar />
@@ -35,7 +28,6 @@ export default function WrapView() {
             <p
               onClick={() => setIsWrap(true)}
               className={isWrap ? styles.active : ""}
-              
             >
               Wrap
             </p>
@@ -53,8 +45,8 @@ export default function WrapView() {
         <div className={styles.center}>
           <div className={styles.content}>
             {convertedFrom({
-              title: isWrap ? "Dia" : "Diax",
-              holder: "from",
+              title: "Diax",
+              holder: "amount to send",
               val: tokenValue.base_coin.toString(),
               onChange: (e) => {
                 let _val = Number(e.target.value);
@@ -65,22 +57,25 @@ export default function WrapView() {
                 }));
               },
             })}
-            {convertedTo({
-              title: !isWrap ? "Dia" : "Diax",
-              holder: "to",
-              val: tokenValue.base_coin.toString(),
-              onChange: (e) => {
-                setTokenValue((prev) => ({
-                  ...prev,
-                  converted_token: Number(e.target.value),
-                }));
-              },
-            })}
+            <div className={styles.field}>
+              <select>
+                <option value={""}>
+                  <p>Name: 0.03893</p>
+                </option>
+                <option value={""}>
+                  <p>Name: 0.03893</p>
+                </option>
+                <option value={""}>
+                  <p>Name: 0.03893</p>
+                </option>
+              </select>
+              <p>{"address"}</p>
+            </div>
           </div>
         </div>
         <div className={styles.bottom}>
           <Button
-            text={"Wrap"}
+            text={"Send"}
             onClick={() => {
               handleSubmit();
             }}
@@ -112,23 +107,3 @@ function convertedFrom(props: {
   );
 }
 
-function convertedTo(props: {
-  holder?: string;
-  title: string;
-  val: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-}) {
-  return (
-    <div className={styles.field}>
-      <input
-        type="number"
-        placeholder={"amount"}
-        disabled
-        maxLength={8}
-        onChange={props.onChange}
-        value={props.val}
-      />
-      <p>{props.title}</p>
-    </div>
-  );
-}

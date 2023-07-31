@@ -9,28 +9,28 @@ export default function UseCaseView() {
       <div className={styles.inner_container}>
         {cardItem({
           icon: <AiFillSecurityScan />,
-          title: "Hello peops",
-          p: "Automate all your reoccurring bills to enable your focus on other aspects of your life.",
+          title: "For employees",
+          p: "Receive your salary as you work in realtime. You don't have to wait till the end of the month to get paid.",
         })}
         {cardItem({
           icon: <AiFillAppstore />,
-          title: "Hello peops",
-          p: "Automate all your reoccurring bills to enable your focus on other aspects of your life.",
+          title: "For family",
+          p: "Settle reoccuring family expenses by setting up streams with sends money periodiclly.",
         })}
         {cardItem({
           icon: <AiFillSecurityScan />,
-          title: "Hello peops",
-          p: "Automate all your reoccurring bills to enable your focus on other aspects of your life.",
+          title: "For subscription based systems",
+          p: "Can be embedded in subscription based systems. Where you pay as you use.",
         })}
         {cardItem({
           icon: <AiFillSecurityScan />,
-          title: "Hello peops",
-          p: "Automate all your reoccurring bills to enable your focus on other aspects of your life.",
+          title: "For streaming platforms",
+          p: "A perfect way to implement a pay-as-you-go platform",
         })}
         {cardItem({
           icon: <AiFillSecurityScan />,
-          title: "Hello peops",
-          p: "Automate all your reoccurring bills to enable your focus on other aspects of your life.",
+          title: "For employers",
+          p: "Enables you focus on more important task as you automate payment of bills using superfluid.",
         })}
       </div>
     </section>

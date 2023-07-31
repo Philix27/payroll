@@ -9,17 +9,17 @@ export default function CardsView() {
         {cardItem({
           img: "./cards/c1.png",
           title: "Tokens",
-          p: "Automate all your reoccurring bills to enable your focus on other aspects of your life.",
+          p: "Convert your ERC20 tokens to a streamable token. It works for all ERC20 token",
         })}
         {cardItem({
           img: "./cards/c3.png",
           title: "Security",
-          p: "Automate all your reoccurring bills to enable your focus on other aspects of your life.",
+          p: "Relies on blockchain security infrastructure. Hence, very secured for moving money accross the globe",
         })}
         {cardItem({
           img: "./cards/c2.png",
           title: "Funds",
-          p: "Automate all your reoccurring bills to enable your focus on other aspects of your life.",
+          p: "Move funds every seconds. Leverage on this technology for a fast pace, realtime payment system",
         })}
       </div>
     </section>
