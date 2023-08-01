@@ -4,13 +4,13 @@ import { BiSearch } from "react-icons/bi";
 import styled from "styled-components";
 
 interface Props {
-  value?: number | string;
+  value: number | string;
   placeholder: string;
   error?: string;
   widthByPercent: string;
   icon?: JSX.Element;
 
-  handleChange?: (e: ChangeEvent<HTMLInputElement>) => void;
+  handleChange: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 
 export default function WorkflowTextInput(props: Props) {
@@ -20,11 +20,7 @@ export default function WorkflowTextInput(props: Props) {
   return (
     <Container width={widthByPercent}>
       {icon && icon}
-      <input
-        // value={value}
-        // onChange={handleChange}
-        placeholder={placeholder}
-      />
+      <input value={value} onChange={handleChange} placeholder={placeholder} />
     </Container>
   );
 }

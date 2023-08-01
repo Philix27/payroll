@@ -40,6 +40,14 @@
           color: $backgroundColor;
           border-radius: 10px;
         }
+        select {
+          background-color: $primaryColor;
+          color: $backgroundColor;
+          border-radius: 10px;
+          padding: 5px 7px;
+          border: none;
+          outline: none;
+        }
       }
     }
     .center {

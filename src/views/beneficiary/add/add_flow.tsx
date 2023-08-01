@@ -1,15 +1,23 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./styles.module.scss";
-import { BiCalendar } from "react-icons/bi";
-import { MdDeleteOutline } from "react-icons/md";
 import { IoClose } from "react-icons/io5";
 import WorkflowTextInput from "./text-input";
 import { Button } from "comp/button";
+import { useAppDispatch, useAppSelector } from "redux/hooks";
+import { SettingsReduxType } from "redux/store";
+import { SettingsActions } from "redux/slice/settings";
+import { setTimeout } from "timers";
 
 interface IProps {
   showFlow: React.Dispatch<React.SetStateAction<boolean>>;
 }
 export default function AddBeneficiary(props: IProps) {
+  const dispatch = useAppDispatch();
+  const [showSuccess, setShowSuccess] = useState(false);
+  const [formVal, setformVal] = useState({
+    name: "",
+    address: "",
+  });
   return (
     <div className={styles.addFlowContainer}>
       <div className={styles.second_wrapper}>
@@ -37,6 +45,10 @@ export default function AddBeneficiary(props: IProps) {
                   <WorkflowTextInput
                     placeholder="Name of employee"
                     widthByPercent={"100%"}
+                    value={formVal.name}
+                    handleChange={(e) => {
+                      setformVal({ ...formVal, name: e.target.value });
+                    }}
                   />
                 </div>
                 <div className={styles.group}>
@@ -44,6 +56,10 @@ export default function AddBeneficiary(props: IProps) {
                   <WorkflowTextInput
                     placeholder="Wallet address of employee"
                     widthByPercent={"100%"}
+                    value={formVal.address}
+                    handleChange={(e) => {
+                      setformVal({ ...formVal, address: e.target.value });
+                    }}
                   />
                 </div>
               </div>
@@ -51,10 +67,22 @@ export default function AddBeneficiary(props: IProps) {
                 <Button
                   text={"Save"}
                   onClick={() => {
-                    console.log("Clicked saving");
+                    if (formVal.address && formVal.name) {
+                      console.log("inner btn ben");
+                      dispatch(
+                        SettingsActions.add_ben({
+                          name: formVal.name,
+                          address: formVal.address,
+                          id: Date.now().toString(),
+                        })
+                      );
+                      setShowSuccess(true);
+                      setTimeout(() => setShowSuccess(false), 3000);
+                    }
                   }}
                 />
               }
+              {showSuccess && <MsgDialog str={"Added Successfully"} />}
             </div>
           </div>
         </div>
@@ -62,3 +90,9 @@ export default function AddBeneficiary(props: IProps) {
     </div>
   );
 }
+
+export function MsgDialog(props: { str: string }) {
+  return <p className={styles.msg}>{props.str}</p>;
+}
+
+// str={"Added Successfully"}

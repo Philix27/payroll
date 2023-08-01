@@ -15,7 +15,7 @@ const authPersistConfig = {
   key: "auth",
   storage: storage,
   version: 1,
-  blacklist: ["somethingTemporary"],
+  blacklist: [],
 };
 
 const rootReducer = combineReducers({

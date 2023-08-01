@@ -25,8 +25,8 @@ export const sideBarItems: ISidebarItem[] = [
     link: AppLinks.dashboard,
   },
   {
-    icon: <MdDashboard />,
-    title: "SF Checkout",
+    icon: <RiExchangeDollarFill />,
+    title: "Checkout",
     link: AppLinks.checkout,
   },
   {
@@ -44,11 +44,11 @@ export const sideBarItems: ISidebarItem[] = [
     title: "Wrap/Unwrap",
     link: AppLinks.wrap,
   },
-  {
-    icon: <RiExchangeDollarFill />,
-    title: "Good Dollar",
-    link: AppLinks.goody,
-  },
+  // {
+  //   icon: <RiExchangeDollarFill />,
+  //   title: "Good Dollar",
+  //   link: AppLinks.goody,
+  // },
   {
     icon: <IoMdSettings />,
     title: "Settings",

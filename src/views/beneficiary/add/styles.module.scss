@@ -1,6 +1,14 @@
 @import "../../../styles/variables";
 @import "../../../styles/screensize";
 
+.msg {
+  padding: 5px 12px;
+  background-color: rgb(6, 184, 77);
+  border-radius: 10px;
+  position: absolute;
+  font-size: small;
+  bottom: 40px;
+}
 @mixin centerItem {
   display: flex;
   flex-direction: column;
