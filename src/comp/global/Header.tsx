@@ -15,8 +15,8 @@ export default function MetaHeader(props: IProps) {
         <meta charSet="UTF-8" />
         <meta name="description" content={props.description} />
         <meta name="keywords" content={props.keywords} />
-        <meta name="author" content="Unwind." />
-        <meta name="company" content="Unwind." />
+        <meta name="author" content="PaySync." />
+        <meta name="company" content="PaySync." />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/images/Unwind.png" />
       </Head>
